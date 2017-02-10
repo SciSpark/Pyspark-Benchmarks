@@ -17,8 +17,14 @@ This benchmark has been tested with daily precipitation data from [TRMM](https:/
 conda config --add channels conda-forge 
 conda install gdal nco
 ```
+We have provided a convenience script for downloading and converting all the PRISM data files:
 
-You will also need to edit `stats.py` to ensure that the filename matching pattern is correct. 
+```
+chmod +x download_PRISM.sh
+./download_PRISM.sh
+```
+
+If you are not using PRISM data, you will also need to edit `stats.py` to ensure that the filename matching pattern is correct. 
 
 ## Running the Benchmark
 Use `spark-submit` as follows:
